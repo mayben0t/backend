@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.webapp.dao.UserMapper">
+
+    <!--
+        create table tb_user(
+        id int(11) auto_increment primary key,
+        name varchar(20))engine=innodb default charset=utf8mb4
+    -->
+
+
+    <select id="getAll" resultType="com.example.api.model.User">
+        select * from tb_user
+    </select>
+</mapper>

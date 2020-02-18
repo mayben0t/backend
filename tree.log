@@ -1,0 +1,21 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< com.example:webapp >-------------------------
+[INFO] Building webapp 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from local-nexus: http://maven.koolearn-inc.com/nexus/content/groups/public/com/example/first_backend/1.0.0-SNAPSHOT/maven-metadata.xml
+[WARNING] Could not transfer metadata com.example:first_backend:1.0.0-SNAPSHOT/maven-metadata.xml from/to local-nexus (http://maven.koolearn-inc.com/nexus/content/groups/public/): maven.koolearn-inc.com: nodename nor servname provided, or not known
+Downloading from local-nexus: http://maven.koolearn-inc.com/nexus/content/groups/public/com/example/first_backend/1.0.0-SNAPSHOT/first_backend-1.0.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.343 s
+[INFO] Finished at: 2020-02-16T19:06:55+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project webapp: Could not resolve dependencies for project com.example:webapp:jar:0.0.1-SNAPSHOT: Failed to collect dependencies at com.example:api:jar:6.6.6-SNAPSHOT: Failed to read artifact descriptor for com.example:api:jar:6.6.6-SNAPSHOT: Could not transfer artifact com.example:first_backend:pom:1.0.0-SNAPSHOT from/to local-nexus (http://maven.koolearn-inc.com/nexus/content/groups/public/): maven.koolearn-inc.com: Unknown host maven.koolearn-inc.com -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
