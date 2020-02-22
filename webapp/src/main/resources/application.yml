@@ -36,4 +36,8 @@ spring:
       indent_output: true
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
+  # <a href="https://www.cnblogs.com/kingsonfu/p/9245731.html"/>
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 
