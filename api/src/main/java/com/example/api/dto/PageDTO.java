@@ -18,7 +18,7 @@ public class PageDTO<T> {
     private Integer size = 10;
     private Integer count;
     private Integer totalPages;
-    private ResultDTO<T> resultDTO;
+    private ResultDTO<T> result;
 
     public PageDTO setTotalPagesByCount(int count){
         this.totalPages = count%size ==0 ?count/size:count/size+1;

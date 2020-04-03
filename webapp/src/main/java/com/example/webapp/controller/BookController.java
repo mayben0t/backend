@@ -25,12 +25,12 @@ public class BookController {
     public PageDTO getAll(@RequestParam(value = "page",defaultValue = "1")Integer page,
                           @RequestParam(value = "size",defaultValue = "5")Integer size){
         if(Objects.isNull(page)||Objects.isNull(size)||page<1||size<1){
-            return new PageDTO().setResultDTO(new ResultDTO(1,"检查参数",null));
+            return new PageDTO().setResult(new ResultDTO(1,"检查参数",null));
         }
         int count = bookService.getCount();
         return new PageDTO().setPage(page).setSize(size)
                 .setCount(count).setTotalPagesByCount(count)
-                .setResultDTO(new ResultDTO<>(0,"success",bookService.getAll(page,size)));
+                .setResult(new ResultDTO<>(0,"success",bookService.getAll(page,size)));
     }
 
     @PostMapping(value = "/insert")

@@ -7,6 +7,10 @@
     <result column="desc" property="desc" jdbcType="VARCHAR" />
     <result column="ts" property="ts" jdbcType="TIMESTAMP" />
   </resultMap>
+  <sql id="Base_Column">
+    id,user_id,`desc`,ts
+  </sql>
+
   <insert id="insert" parameterType="com.example.api.model.UserProduct" >
     insert into tb_user_product ( user_id, `desc`,
       ts)
@@ -48,4 +52,24 @@
         (#{item.userId,jdbcType=INTEGER},#{item.desc,jdbcType=VARCHAR})
       </foreach>
   </insert>
+
+  <select id="getAll" resultMap="BaseResultMap">
+    select
+    <include refid="com.example.webapp.dao.BookMapper.Base_Column"/>
+    from tb_user_product
+  </select>
+
+  <select id="getAllByPage" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column"/>
+    from tb_user_product
+    order by id
+    limit #{start},#{size}
+  </select>
+
+
+  <select id="getCount" resultType="int">
+    select count(1)
+    from tb_user_product
+  </select>
 </mapper>
