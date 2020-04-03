@@ -1,0 +1,7 @@
+create table `tb_user_product`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`string` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4
