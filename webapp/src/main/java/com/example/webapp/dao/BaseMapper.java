@@ -16,4 +16,6 @@ public interface BaseMapper<T> {
     int deleteById(Integer id);
 
     int update(T body);
+
+
 }
