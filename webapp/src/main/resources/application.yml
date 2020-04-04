@@ -117,7 +117,7 @@ sharding:
         props:
           sql.show: true
         tables:
-          tb_user_product:  #t_user表
+          tb_user_product:  #tb_user_product表
             key-generator-column-name: user_id  #主键
             actual-data-nodes: ds${1}.tb_user_product_${0..9}  #数据节点
             database-strategy:  #分库策略
