@@ -50,6 +50,11 @@
         (#{item.userId,jdbcType=INTEGER},#{item.desc,jdbcType=VARCHAR})
       </foreach>
   </insert>
+  <update id="update" parameterType="com.example.api.model.UserProduct">
+        update tb_user_product
+        set `desc` = #{desc,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+  </update>
 
   <select id="getAll" resultMap="BaseResultMap">
     select

@@ -14,4 +14,6 @@ public interface UserProductMapper extends BaseMapper<UserProduct>{
     void insertBatch(@Param("list") List<UserProduct> body);
 
     UserProduct selectByUserIdAndDesc(Integer userId, String desc);
+
+    int update(UserProduct userProduct);
 }

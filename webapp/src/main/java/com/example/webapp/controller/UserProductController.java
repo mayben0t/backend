@@ -51,7 +51,9 @@ public class UserProductController {
         return new ResultDTO(0,"success","插入成功");
     }
 
-    public void  test(){
-        DruidDataSource druidDataSource = new DruidDataSource();
+    @PostMapping("/update")
+    public ResultDTO  update(UserProduct userProduct){
+        userProductService.update(userProduct);
+        return new ResultDTO(0,"");
     }
 }

@@ -14,4 +14,7 @@ public interface IUserProductService {
     void insert(UserProduct userProduct);
 
     UserProduct selectByUserIdAndDesc(Integer userId, String desc);
+
+
+    int update(UserProduct userProduct);
 }

@@ -50,4 +50,14 @@ public class UserProductService implements IUserProductService {
     public UserProduct selectByUserIdAndDesc(Integer userId, String desc) {
         return userProductMapper.selectByUserIdAndDesc(userId,desc);
     }
+
+
+    @Override
+    public int update(UserProduct userProduct) {
+        Preconditions.checkNotNull(userProduct,"userProduct对象不能为空");
+//        Preconditions.checkNotNull(userProduct.getUserId(),"用户id不能为空");
+        Preconditions.checkNotNull(userProduct.getDesc(),"内容不能为空");
+
+        return userProductMapper.update(userProduct);
+    }
 }
