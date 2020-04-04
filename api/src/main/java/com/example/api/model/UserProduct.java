@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 @Data
 public class UserProduct {
-    private Integer id;
+    private Long id;
 
     private Integer userId;
 
