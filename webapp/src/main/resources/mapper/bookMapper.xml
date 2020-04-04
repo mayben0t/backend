@@ -53,9 +53,9 @@
 
     <insert id="insert" parameterType="com.example.api.model.Book">
         insert into tb_book
-        (`name`,author,publish,pages,price,is_deleted,create_time,create_user)
+        (`name`,author,publish,pages,price,is_deleted,create_user)
         values
-        (#{name},#{author},#{publish},#{pages},#{price},#{isDeleted},now(),#{createUser})
+        (#{name},#{author},#{publish},#{pages},#{price},#{isDeleted},#{createUser})
     </insert>
 
     <update id="update" parameterType="com.example.api.model.Book">
