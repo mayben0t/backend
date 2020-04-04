@@ -18,10 +18,10 @@ public class UserProductController {
     @Autowired
     private IUserProductService userProductService;
 
-    @GetMapping("/findAll")
-    public ResultDTO findAll(){
-        return new ResultDTO(0,userProductService.getAll());
-    }
+//    @GetMapping("/findAll")
+//    public ResultDTO findAll(){
+//        return new ResultDTO(0,userProductService.getAll());
+//    }
 
     @GetMapping("/getAll")
     public ResultDTO getAll(@RequestParam(value = "page",required=false,defaultValue = "1")Integer page,

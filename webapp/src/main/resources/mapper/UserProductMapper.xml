@@ -55,7 +55,7 @@
 
   <select id="getAll" resultMap="BaseResultMap">
     select
-    <include refid="com.example.webapp.dao.BookMapper.Base_Column"/>
+    <include refid="Base_Column"/>
     from tb_user_product
   </select>
 
