@@ -56,6 +56,12 @@
         where id = #{id,jdbcType=INTEGER}
   </update>
 
+  <update id="updateByUserId" parameterType="com.example.api.model.UserProduct">
+        update tb_user_product
+        set `desc` = #{desc,jdbcType=VARCHAR}
+        where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+
   <select id="getAll" resultMap="BaseResultMap">
     select
     <include refid="Base_Column"/>

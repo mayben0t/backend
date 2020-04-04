@@ -16,4 +16,6 @@ public interface UserProductMapper extends BaseMapper<UserProduct>{
     UserProduct selectByUserIdAndDesc(Integer userId, String desc);
 
     int update(UserProduct userProduct);
+
+    int updateByUserId(UserProduct userProduct);
 }

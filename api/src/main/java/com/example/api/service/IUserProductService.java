@@ -17,4 +17,6 @@ public interface IUserProductService {
 
 
     int update(UserProduct userProduct);
+
+    int updateByUserId(UserProduct userProduct);
 }

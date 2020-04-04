@@ -60,4 +60,13 @@ public class UserProductService implements IUserProductService {
 
         return userProductMapper.update(userProduct);
     }
+
+    @Override
+    public int updateByUserId(UserProduct userProduct) {
+        Preconditions.checkNotNull(userProduct,"userProduct对象不能为空");
+//        Preconditions.checkNotNull(userProduct.getUserId(),"用户id不能为空");
+        Preconditions.checkNotNull(userProduct.getDesc(),"内容不能为空");
+
+        return userProductMapper.updateByUserId(userProduct);
+    }
 }

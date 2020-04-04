@@ -56,4 +56,10 @@ public class UserProductController {
         userProductService.update(userProduct);
         return new ResultDTO(0,"");
     }
+
+    @PostMapping("/updateByUserId")
+    public ResultDTO  updateByUserId(UserProduct userProduct){
+        userProductService.updateByUserId(userProduct);
+        return new ResultDTO(0,"");
+    }
 }
