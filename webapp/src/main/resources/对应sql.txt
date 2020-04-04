@@ -1,0 +1,95 @@
+
+create table `tb_user_product`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`desc` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4;
+
+
+## 分库分表准备
+create database test1;
+use test1;
+
+
+create table `tb_user_product_0`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`desc` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4;
+
+create table `tb_user_product_1`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`desc` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4;
+
+
+create table `tb_user_product_2`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`desc` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4;
+
+create table `tb_user_product_3`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`desc` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4;
+
+create table `tb_user_product_4`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`desc` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4;
+
+create table `tb_user_product_5`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`desc` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4;
+
+create table `tb_user_product_6`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`desc` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4;
+
+create table `tb_user_product_7`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`desc` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4;
+
+create table `tb_user_product_8`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`desc` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4;
+
+create table `tb_user_product_9`(
+	`id` int(11) not null auto_increment primary key comment '主键',
+	`user_id` int(11) not null comment '用户id，分表关键字'	,
+	`desc` varchar(100)  null comment '一些其他信息',
+	ts timestamp not null DEFAULT current_timestamp on update CURRENT_TIMESTAMP,
+	index index_ts(ts)
+)Engine = innodb default charset=utf8mb4;
