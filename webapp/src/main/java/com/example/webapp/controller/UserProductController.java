@@ -1,5 +1,6 @@
 package com.example.webapp.controller;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import com.example.api.dto.PageDTO;
 import com.example.api.dto.ResultDTO;
 import com.example.api.model.UserProduct;
@@ -37,5 +38,20 @@ public class UserProductController {
                  .setCount(userProductService.getAllCount())
                  .setTotalPagesByCount(listPageDTO.getCount());
         return new ResultDTO(0,listPageDTO);
+    }
+
+    @GetMapping("/getByUserId")
+    public ResultDTO getByUserId(@RequestParam("userId") Integer userId,@RequestParam(value = "desc",defaultValue = "") String desc){
+        return new ResultDTO(0,userProductService.selectByUserIdAndDesc(userId,desc));
+    }
+
+    @PostMapping("/insert")
+    public ResultDTO insert(UserProduct userProduct){
+        userProductService.insert(userProduct);
+        return new ResultDTO(0,"success","插入成功");
+    }
+
+    public void  test(){
+        DruidDataSource druidDataSource = new DruidDataSource();
     }
 }

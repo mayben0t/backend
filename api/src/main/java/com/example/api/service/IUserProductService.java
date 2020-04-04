@@ -10,4 +10,8 @@ public interface IUserProductService {
     List<UserProduct> getAllByPage(Integer start,Integer size);
 
     Integer getAllCount();
+
+    void insert(UserProduct userProduct);
+
+    UserProduct selectByUserIdAndDesc(Integer userId, String desc);
 }

@@ -12,10 +12,8 @@
   </sql>
 
   <insert id="insert" parameterType="com.example.api.model.UserProduct" >
-    insert into tb_user_product ( user_id, `desc`,
-      ts)
-    values (  #{userId,jdbcType=INTEGER}, #{desc,jdbcType=VARCHAR},
-      #{ts,jdbcType=TIMESTAMP})
+    insert into tb_user_product ( user_id, `desc`)
+    values (  #{userId,jdbcType=INTEGER}, #{desc,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.example.api.model.UserProduct" >
     insert into tb_user_product
@@ -71,5 +69,16 @@
   <select id="getCount" resultType="int">
     select count(1)
     from tb_user_product
+  </select>
+  <select id="selectByUserIdAndDesc" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column"/>
+    from
+    tb_user_product
+    where user_id = #{userId}
+    <if test="desc!=null and desc!=''">
+      and `desc` = #{desc}
+    </if>
+
   </select>
 </mapper>
