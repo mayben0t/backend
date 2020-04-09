@@ -69,7 +69,7 @@ public class DFSTest {
 
         int i=0;
 //        System.out.println(arr);
-        System.out.println(i);
+        System.out.println(i+1);
         stack.add(i);
         hasMarked.add(i);
             for(int j=0;i<6;j++){
@@ -80,7 +80,7 @@ public class DFSTest {
                     //拿这个纵坐标去横坐标里查
                     hasMarked.add(j);
                     stack.add(j);
-                    System.out.println(j);
+                    System.out.println(j+1);
                     doReturn(j,arr);
                 }
             }
@@ -98,7 +98,7 @@ public class DFSTest {
 //            for(int t = temp;temp<6;t++){
                 for(int x = 0;x<6;x++){
                     if (arr[x][temp] == 1 && !hasMarked.contains(x)){
-                        System.out.println(x);
+                        System.out.println(x+1);
                         hasMarked.add(x);
                         stack.add(x);
                         doReturn(x,arr);
